@@ -86,10 +86,7 @@ const navBarD = document.querySelector("nav a:nth-of-type(4)");
 const navBarE = document.querySelector("nav a:nth-of-type(5)");
 const navBarF = document.querySelector("nav a:nth-of-type(6)");
 const newLink = document.createElement("a");
-newLink.textContent = "More";
-newLink.href = "#";
-const nav = document.querySelector("nav");
-nav.appendChild(newLink);
+const home = document.createElement("a");
 
 topHeading.textContent = "dom is awesome";
 button.textContent = "Get Started";
@@ -124,9 +121,24 @@ navBarF.textContent = "Contact";
 navBar.forEach((item) => {
   item.style.color = "green";
 });
-const home = document.createElement("a");
+newLink.textContent = "More";
+newLink.href = "#";
+const nav = document.querySelector("nav");
+nav.appendChild(newLink);
 home.textContent = "Home";
 home.href = "#";
 nav.prepend(home);
 home.style.color = "green";
 newLink.style.color = "green";
+
+/* stretch*/
+
+topHeading.style.color = "blue";
+contact.style.color = "red";
+const content = document.querySelector(".main-content");
+content.style.backgroundColor = "lightGrey";
+const bottomSection = document.querySelector(".contact");
+bottomSection.style.display = "flex";
+bottomSection.style.flexDirection = "column";
+bottomSection.style.alignItems = "center";
+nav.style.fontWeight = "bold";
