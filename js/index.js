@@ -77,9 +77,21 @@ const visionP = document.querySelector(
   ".bottom-content .text-content:nth-of-type(3) p"
 );
 const secondPic = document.getElementById("middle-img");
-const navBar = document.querySelector("nav a");
 
-topHeading.textContent = "Dom Is Awesome!";
+const navBar = document.querySelectorAll("a");
+const navBarA = document.querySelector("nav a");
+const navBarB = document.querySelector("nav a:nth-of-type(2)");
+const navBarC = document.querySelector("nav a:nth-of-type(3)");
+const navBarD = document.querySelector("nav a:nth-of-type(4)");
+const navBarE = document.querySelector("nav a:nth-of-type(5)");
+const navBarF = document.querySelector("nav a:nth-of-type(6)");
+const newLink = document.createElement("a");
+newLink.textContent = "More";
+newLink.href = "#";
+const nav = document.querySelector("nav");
+nav.appendChild(newLink);
+
+topHeading.textContent = "dom is awesome";
 button.textContent = "Get Started";
 mainPic.setAttribute("src", siteContent["cta"]["img-src"]);
 contact.textContent = "Contact";
@@ -103,4 +115,18 @@ productP.textContent =
 visionP.textContent =
   "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 secondPic.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
-navBar.textContent = "hello, home";
+navBarA.textContent = "Services";
+navBarB.textContent = "Product";
+navBarC.textContent = "Vision";
+navBarD.textContent = "Features";
+navBarE.textContent = "About";
+navBarF.textContent = "Contact";
+navBar.forEach((item) => {
+  item.style.color = "green";
+});
+const home = document.createElement("a");
+home.textContent = "Home";
+home.href = "#";
+nav.prepend(home);
+home.style.color = "green";
+newLink.style.color = "green";
